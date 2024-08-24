@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('.emailOption').click(function() {
         var period = $(this).data('period');
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbznPoKN06WfX8_MtoBkPtyqknq1al9KpiQvkOqjm6NTu9WZIAz-F5ja9tnrWb4W9qOR/exec',
+            url: 'https://script.google.com/macros/s/AKfycbz3NzbaAntDkk1FmmzWs-0oh9oQpMWZ6UYo4ejlQb0BdNizmjL0hbgp2_NRfclRfJQt/exec',
             method: 'POST',
             data: { action: 'sendEmail', period: period },
             success: function(response) {
