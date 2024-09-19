@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     font-family: "Moderustic", system-ui;
 }
-.container{
+
+.container {
     text-align: center;
 }
-input{
+
+input {
     padding: 4px;
     width: 90%;
     max-width: 400px;
@@ -16,15 +19,18 @@ input{
     border-bottom: 1px solid #000;
     margin-top: 20px;
 }
-input[type="text"]{
+
+input[type="text"] {
     margin-top: 18%;
 }
-.btn{
+
+.btn {
     width: 90%;
     max-width: 400px;
 }
-button{
-    font-family: 'Arial' , sans-serif;
+
+button {
+    font-family: 'Arial', sans-serif;
     margin-top: 10px;
     padding: 8px;
     background: blue;
@@ -32,11 +38,19 @@ button{
     font-weight: 500;
     border-radius: 25px;
     color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-#expenseForm button{
+
+button:hover {
+    background-color: darkblue;
+}
+
+#expenseForm button {
     margin-top: 10%;
 }
-h4{
+
+h4 {
     font-size: 20px;
     margin-top: 8%;
     font-weight: 450;
@@ -44,24 +58,81 @@ h4{
     text-align: left;
     margin-left: 23px;
 }
-.emailOption{
+
+.emailOption {
     width: 26%;
     margin-left: 5.34%;
     border-radius: 0px;
 }
-.btn-div{
+
+.btn-div {
     display: flex;
 }
-h1{
+
+h1 {
     margin-top: 10%;
     font-weight: 400;
     font-size: 26px;
 }
-h2{
+
+h2 {
     font-weight: 400;
     font-size: 22px;
 }
-.text-div{
+
+.text-div {
     text-align: left;
     margin-left: 5.34%;
+}
+
+/* Loader styles */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 16px;
+}
+
+.loader::before {
+    content: '...';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    animation: dots 1s infinite steps(4, end);
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60% {
+        content: '...';
+    }
+    80%, 100% {
+        content: '';
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .btn-div {
+        flex-direction: column;
+    }
+
+    .emailOption {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    h4 {
+        text-align: center;
+        margin-left: 0;
+    }
 }
