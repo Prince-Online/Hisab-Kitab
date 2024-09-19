@@ -1,25 +1,33 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<div class="container">
-    <form id="expenseForm" action="https://script.google.com/macros/s/AKfycbznPoKN06WfX8_MtoBkPtyqknq1al9KpiQvkOqjm6NTu9WZIAz-F5ja9tnrWb4W9qOR/exec" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
         <div class="text-div">
-        <h1>Expense Tracker</h1>
-        <h2>Track Your Daily Expenses</h2>
+            <h1>Expense Tracker</h1>
+            <h2>Track Your Daily Expenses</h2>
+        </div>
+        <form id="expenseForm" action="https://script.google.com/macros/s/AKfycbznPoKN06WfX8_MtoBkPtyqknq1al9KpiQvkOqjm6NTu9WZIAz-F5ja9tnrWb4W9qOR/exec" method="post">
+            <input type="text" name="purpose" placeholder="Purpose:" required><br>
+            <input type="number" name="amount" placeholder="Amount:" required><br>
+            <button type="submit" class="btn">Add Expense</button>
+        </form>
+        <button id="sendEmailBtn" class="btn">Generate Report</button>
+        <div id="emailOptions" style="display:none;">
+            <h4>Download PDF of:</h4>
+            <div class="btn-div">
+                <button class="emailOption" data-period="1month">Last 1 Month</button>
+                <button class="emailOption" data-period="6months">Last 6 Months</button>
+                <button class="emailOption" data-period="1year">Last 1 Year</button>
+            </div>
+        </div>
     </div>
-        <input type="text" name="purpose" placeholder="Purpose:" required><br>
-        <input type="number" name="amount" placeholder="Amount:" required><br>
-        <button type="submit" class="btn">Add Expense</button>
-    </form>
-    <button id="sendEmailBtn" class="btn">Generate Report</button>
-    <div id="emailOptions" style="display:none;">
-        <h4>Download PDF of:</h4>
-        <div class="btn-div">
-        <button class="emailOption" data-period="1month">Last 1 Month</button><br>
-        <button class="emailOption" data-period="6months">Last 6 Months</button><br>
-        <button class="emailOption" data-period="1year">Last 1 Year</button>
-    </div>
-    </div>
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
