@@ -43,7 +43,7 @@ $(document).ready(function() {
         var startDate = $('#startDate').val();
         var endDate = $('#endDate').val();
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbyiz4qHbE64ghBhsmfUR4-lRveBkm86ob8IDApStnftbb-rIcSSnDcPu89GszhZKH0D/exec',
+            url: 'https://script.google.com/macros/s/AKfycbzKIgXiqA_LQNdhFlWoL8zwmHkoLJiN6yZN_IxGWb7MWPJxMylqTIpWJcmfbwv45Mpm/exec',
             method: 'POST',
             data: {
                 action: 'sendEmail',
