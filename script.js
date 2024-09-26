@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.emailOption').click(function() {
         var period = $(this).data('period');
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbyiz4qHbE64ghBhsmfUR4-lRveBkm86ob8IDApStnftbb-rIcSSnDcPu89GszhZKH0D/exec',
+            url: 'https://script.google.com/macros/s/AKfycbycdvdHAXh-9WK2tItWVyXrJXN3LCtL5HAXkSV65SU4jZkxiWy7gXmxJ104XM9jRT5I/exec',
             method: 'POST',
             data: { action: 'sendEmail', period: period },
             success: function(response) {
