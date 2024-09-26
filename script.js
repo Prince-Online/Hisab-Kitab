@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.emailOption').click(function() {
         var period = $(this).data('period');
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwbMhf6zVHsI5v5GruEH4i5x6gSLGEmfPbUkGbbGPL-ITkNS08zf09sH3fu7FThusVM/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyu_1IF6I2slgFd73DAuG434MbwQ4ANjiiZmCdvEtD5uXLhSnRpQgVfBP1fjI7rvrYY/exec',
             method: 'POST',
             data: { action: 'sendEmail', period: period },
             success: function(response) {
@@ -43,7 +43,7 @@ $(document).ready(function() {
         var startDate = $('#startDate').val();
         var endDate = $('#endDate').val();
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbzKIgXiqA_LQNdhFlWoL8zwmHkoLJiN6yZN_IxGWb7MWPJxMylqTIpWJcmfbwv45Mpm/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyu_1IF6I2slgFd73DAuG434MbwQ4ANjiiZmCdvEtD5uXLhSnRpQgVfBP1fjI7rvrYY/exec',
             method: 'POST',
             data: {
                 action: 'sendEmail',
